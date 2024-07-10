@@ -20,7 +20,6 @@ function printElements(response) {
         const td1 = document.createElement("td");
         td1.append(idx + 1);
         tr.append(td1);
-        console.log(coin);
         const tds = Object.keys(coin).filter(key => ["image", "id", "name", "symbol", "current_price",
             "market_cap", "price_change_24h", "total_supply", "max_supply", "circulating_supply"
         ].includes(key)).map(key => {
@@ -28,7 +27,6 @@ function printElements(response) {
             td.append(coin[key]);
             return td;
         });
-        console.log(tds);
         tr.append(...tds);
         return tr;
     });
