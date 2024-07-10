@@ -29,7 +29,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Shape Tracker',
+            title: 'Crypto Analytics App',
             template: './src/index.html',
             inject: 'body'
         }),

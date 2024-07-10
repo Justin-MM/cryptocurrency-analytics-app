@@ -1,0 +1,21 @@
+body {
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 5px;
+    background-color: #000000;
+    font-size: small;
+}
+
+img {
+    max-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 1px;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
