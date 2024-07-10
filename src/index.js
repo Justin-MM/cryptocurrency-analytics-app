@@ -24,7 +24,17 @@ function printElements(response) {
             "market_cap", "price_change_24h", "total_supply", "max_supply", "circulating_supply"
         ].includes(key)).map(key => {
             const td = document.createElement("td");
-            td.append(coin[key]);
+            if (key === "image") {
+                const img = document.createElement('img');
+                img.src = coin[key];
+                td.append(img);
+            } else {
+                if (["current_price", "market_cap", "price_change_24h"].includes(key) && coin[key]) {
+                    td.append(`${(Number(coin[key])).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}`);
+                } else {
+                    td.append(coin[key]);
+                }
+            }
             return td;
         });
         tr.append(...tds);
